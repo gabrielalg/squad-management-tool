@@ -1,0 +1,25 @@
+#header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  z-index: 500;
+  padding: 10px;
+  background-image: var(--brand-gradient-right);
+}
+
+  #header div {
+    justify-content: space-between;
+  }
+
+  #header h1, #header p {
+    color: var(--white);
+    margin: 0 10px;
+  }
+
+  #header .brand-logo {
+    min-width: 40px;
+    width: 40px;
+    height: auto;
+  }
+

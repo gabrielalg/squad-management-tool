@@ -1,0 +1,57 @@
+/* ------- TEXTOS */
+
+:root {
+  --font-roboto: 'Roboto', sans-serif;
+}
+
+.text-display {
+  font-family: var(--font-roboto);
+  margin: 0;
+  font-size: 70px;
+  font-weight: 400;
+}
+
+.text-title {
+  font-family: var(--font-roboto);
+  margin: 0;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.text-subtitle {
+  font-family: var(--font-roboto);
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.text-subtitle-small {
+  font-family: var(--font-roboto);
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.text-body {
+  font-family: var(--font-roboto);
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.text-body-small {
+  font-family: var(--font-roboto);
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.text-caption {
+  font-family: var(--font-roboto);
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}

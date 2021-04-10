@@ -1,0 +1,16 @@
+footer {
+  background-color: var(--grey-a010);
+  padding: 10px;
+}
+
+#copyright, #copyright a {
+  color: var(--grey-a080);
+}
+
+  #copyright img {
+    width: 15px;
+    height: 15px;
+    display: inline;
+    position: relative;
+    bottom: -3px;
+  }

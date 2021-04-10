@@ -1,0 +1,21 @@
+:root {
+  --brand-pink: #BF0E4F;
+  --brand-purple: #8A1F6E;
+  --brand-blue: #552C8A;
+  --brand-gradient-down: linear-gradient(#BF0E4F, #8A1F6E);
+  --brand-gradient-right: linear-gradient(to right, #BF0E4F, #8A1F6E);
+  --grey:#515151;
+  --grey-a080: rgba(81, 81, 81, 0.8);
+  --grey-a060: rgba(81, 81, 81, 0.6);
+  --grey-a030: rgba(81, 81, 81, 0.3);
+  --grey-a020: rgba(81, 81, 81, 0.2);
+  --grey-a010: rgba(81, 81, 81, 0.1);
+  --grey-a005: rgba(81, 81, 81, 0.05);
+  --white: white;
+  --white-a080: rgba(255,255,255,0.8);
+  --white-a060: rgba(255,255,255,0.6);
+  --white-a030: rgba(255,255,255,0.3);
+  --white-a020: rgba(255,255,255,0.2);
+  --white-a010: rgba(255,255,255,0.1);
+  --white-a005: rgba(255,255,255,0.05);
+}

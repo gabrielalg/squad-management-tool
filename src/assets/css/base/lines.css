@@ -1,0 +1,15 @@
+.grey-a020-line {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: var(--grey-a020); 
+}
+
+.grey-a010-line {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: var(--grey-a010); 
+}
