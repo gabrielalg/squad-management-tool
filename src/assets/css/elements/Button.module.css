@@ -39,7 +39,7 @@
   box-shadow: 0px 5px 25px 0px var(--grey-a030);
 }
 
-.fill-btn:visited, .fill-btn:active {
+.fill-btn:visited, .fill-btn:active, .fill-btn:link {
   color: var(--white);
 }
 
