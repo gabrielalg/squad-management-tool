@@ -1,16 +1,19 @@
 footer {
   background-color: var(--grey-a010);
   padding: 10px;
+  margin-top: auto;
 }
+
+  footer div {
+    text-align: center;
+  }
 
 #copyright, #copyright a {
   color: var(--grey-a080);
 }
 
   #copyright img {
-    width: 15px;
-    height: 15px;
+    max-width: 15px;
+    max-height: 15px;
     display: inline;
-    position: relative;
-    bottom: -3px;
   }

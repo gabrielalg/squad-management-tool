@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="10" viewBox="0 0 8 10">
+  <g id="arrows" transform="translate(-430.687 61.859)">
+    <path id="Polígono_1" data-name="Polígono 1" d="M4,0,8,3.5H0Z" transform="translate(430.687 -61.859)" fill="#515151"/>
+    <path id="Polígono_2" data-name="Polígono 2" d="M4,0,8,3.5H0Z" transform="translate(438.687 -51.859) rotate(180)" fill="#515151"/>
+  </g>
+</svg>

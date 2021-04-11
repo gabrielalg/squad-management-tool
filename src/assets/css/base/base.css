@@ -6,7 +6,7 @@
 
 body {
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
   font-family: var(--font-roboto);
   color: var(--grey);
   background-color: var(--grey-a005);
@@ -17,10 +17,6 @@ body {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-}
-
-main {
-  min-height: calc(100vh - 100px);
 }
 
 a, a:link, a:visited, a:active {
@@ -38,9 +34,9 @@ li {
 }
 
 .content {
-  width: calc(100% - 10%);
+  width: 100%;
   max-width: 1400px;
-  margin: 0 5%;
+  padding: 0 5%;
 }
 
 .flex-row {

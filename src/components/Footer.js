@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="content flex-row justify-align-center">
+      <div className="content">
         <div id={style.copyright}>
           <small>
             &copy; 2020 - All Rights Reserved <span> - </span>

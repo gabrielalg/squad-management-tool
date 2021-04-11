@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { ChakraProvider } from "@chakra-ui/react";
+import theme from "./theme/theme.js";
 
 // ---- PÁGINAS
 import Home from './pages/home.js';
@@ -15,27 +17,29 @@ import Header from './components/Header.js';
 import Footer from './components/Footer.js';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Router>
+  <ChakraProvider theme={theme}>
+    <React.StrictMode>
+      <Router>
 
-      <ScrollToTop />
+        <ScrollToTop />
 
-        <Header />
+          <Header />
 
-          <main>
-            <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route exact path="/new-team">
-                <NewTeam/>
-              </Route>
-            </Switch>
-          </main>
+            <main>
+              <Switch>
+                <Route exact path="/">
+                  <Home />
+                </Route>
+                <Route exact path="/new-team">
+                  <NewTeam/>
+                </Route>
+              </Switch>
+            </main>
 
-        <Footer />
+          <Footer />
 
-    </Router>
-  </React.StrictMode>,
+      </Router>
+    </React.StrictMode>
+  </ChakraProvider>,
   document.getElementById('root')
 );

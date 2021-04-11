@@ -1,0 +1,155 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+}
+
+.card-item {
+  padding: 20px;
+}
+
+  .card-item__title {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .card-item__title h2 {
+    color: var(--brand-blue);
+    min-height: 40px; 
+  }
+
+  .card-item__title > span:last-child {
+    margin: 15px 0;
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
+  }
+
+.team-information {
+  padding: 20px 10%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+  .team-information h3 {
+    color: var(--grey-a060);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .team-information > div {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .team-information > div:nth-of-type(1) {
+    margin-right: 4%;
+  }
+
+  .team-information > div:nth-of-type(2) {
+    margin-left: 4%;
+  }
+
+  .team-information .form-item {
+    margin-bottom: 30px;
+  }
+
+  .team-information .form-item span {
+    font-size: 16px;
+  }
+
+  .team-information .form-item span[data-checked] {
+    color: var(--brand-pink);
+    border-color: var(--brand-pink);
+  }
+
+  .team-information .form-item span[data-checked]::before {
+    content: "";
+    display: block;
+    position: relative;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+
+  .team-information .form-item-full {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+    .team-information .form-item-full textarea {
+      height: 100%;
+    }
+
+.configure-squad {
+  composes: team-information;
+}
+
+.soccer-field {
+  background-image: var(--brand-gradient-down);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+
+  .soccer-field > div {
+    flex: 1;
+    padding: 30px 20px;
+  }
+
+  .soccer-field > div > div {
+    justify-content: space-between;
+  }
+
+  .soccer-field a {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    display: block;
+    background-color: var(--white-a060);
+  }
+
+  .soccer-field a span {
+    display: block;
+    font-size: 35px;
+    font-weight: 300;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    color: var(--white);
+  }
+
+  .soccer-field a:hover {
+    background-color: var(--white-a080);
+  }
+
+  .soccer-field > div:nth-child(1) {
+    border-bottom: 1px solid var(--white-a030);
+  }
+
+  .soccer-field > div a{
+    outline: 2px dashed var(--white-a060);
+    border-radius: 50%;
+    outline-offset: 4px;
+  }
+
+  .soccer-field .circle {
+    height: 120px;
+    width: 120px;
+    border: 1px solid var(--white-a030);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
