@@ -6,8 +6,23 @@
   display: inline-block;
 }
 
+.table-cell span svg {
+  width: 0.6em;
+  height: 0.6em;
+}
+
 thead .table-cell:nth-child(2) {
   min-width: 160px;
+}
+
+thead .table-cell {
+  font-family: var(--font-roboto);
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: inherit;
+  letter-spacing: normal;
+  text-transform: capitalize;
 }
 
 tbody tr td:last-child div{

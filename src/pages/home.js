@@ -26,7 +26,7 @@ const Home = () => {
             </Button>
             <span className="grey-a010-line"></span>
           </div>
-          <DataTable className={style['margin-control']}/>
+          <DataTable/>
         </Card>
       </div>
       <div>
