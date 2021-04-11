@@ -19,6 +19,10 @@ section > div > div:nth-child(2) {
   margin-left: 15px;
 }
 
+section > div > div:nth-child(1) .card-item {
+  height: 100%;
+}
+
 .card-item {
   padding: 20px;
 }

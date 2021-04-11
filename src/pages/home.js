@@ -17,16 +17,18 @@ const Home = () => {
   return <>
    <section>
     <div className="content flex-row">
-      <Card className={style['card-item']}>
-        <div className={`flex-row ${style['card-item__title']}`}>
-          <h2 className="text-subtitle">My Teams</h2>
-          <Button to="/new-team" type="fill">
-            <span className={style['btn-icon']}>+</span>
-          </Button>
-          <span className="grey-a010-line"></span>
-        </div>
-        <DataTable className={style['margin-control']}/>
-      </Card>
+      <div>
+        <Card className={style['card-item']}>
+          <div className={`flex-row ${style['card-item__title']}`}>
+            <h2 className="text-subtitle">My Teams</h2>
+            <Button to="/new-team" type="fill">
+              <span className={style['btn-icon']}>+</span>
+            </Button>
+            <span className="grey-a010-line"></span>
+          </div>
+          <DataTable className={style['margin-control']}/>
+        </Card>
+      </div>
       <div>
         <Card className={style['card-item']}>
           <div className={`flex-row ${style['card-item__title']}`}>

@@ -46,7 +46,7 @@ const NewTeam = () => {
                 <FormLabel>Team Name</FormLabel>
                 <Input type="text" placeholder="Insert team name"/>
               </FormControl>
-              <FormControl id="description" className={style['form-item-full']} isRequired>
+              <FormControl id="description" className={style['form-item-full']}>
                 <FormLabel>Description</FormLabel>
                 <Textarea colorScheme="brandPink" />
               </FormControl>
@@ -54,7 +54,7 @@ const NewTeam = () => {
             <div>
               <FormControl id="website" className={style['form-item']} isRequired>
                 <FormLabel>Team Website</FormLabel>
-                <Input type="text" placeholder="https://myteam.com"/>
+                <Input type="url" placeholder="https://myteam.com"/>
               </FormControl>
               <FormControl as="fieldset" id="teamType" className={style['form-item']} isRequired>
                 <FormLabel as="legend">Team Type</FormLabel>
@@ -65,7 +65,7 @@ const NewTeam = () => {
                   </HStack>
                 </RadioGroup>
               </FormControl>
-              <FormControl id="teamTags" className={style['form-item']} isRequired>
+              <FormControl id="teamTags" className={style['form-item']} >
                 <FormLabel>Tags</FormLabel>
                 <Textarea />
               </FormControl>
@@ -74,7 +74,7 @@ const NewTeam = () => {
         <div className={style['configure-squad']}>
           <h3 className="text-body">Configure Squad</h3>
           <div>
-            <FormControl id="teamFormation" className={style['form-item']}>
+            <FormControl id="teamFormation" className={style['form-item']} isRequired>
               <FormLabel>Formation</FormLabel>
               <Select>
                 <TeamFormationOptions />
@@ -82,7 +82,7 @@ const NewTeam = () => {
             </FormControl>
             <div className={style['soccer-field']}>
               <div>
-                <div className="flex-row">
+                <div className={`flex-row ${style['players-row']}`}>
                   <Link to="/new-team">
                    <span> + </span>
                   </Link>
@@ -93,13 +93,41 @@ const NewTeam = () => {
                     <span> + </span>
                   </Link>
                 </div>
-               
+                <div className={`flex-row ${style['players-row']}`}>
+                  <Link to="/new-team">
+                   <span> + </span>
+                  </Link>
+                </div>
               </div>
               <span className={style.circle}></span>
               <div>
-                <a href="/">
-                  TESTE
-                </a>
+                <div className={`flex-row ${style['players-row-middle']}`}>
+                  <Link to="/new-team">
+                    <span> + </span>
+                  </Link>
+                  <Link to="/new-team">
+                    <span> + </span>
+                  </Link>
+                  <Link to="/new-team">
+                    <span> + </span>
+                  </Link>
+                </div>
+                <div className={`flex-row ${style['players-row']}`}>
+                  <Link to="/new-team">
+                    <span> + </span>
+                  </Link>
+                  <Link to="/new-team">
+                    <span> + </span>
+                  </Link>
+                  <Link to="/new-team">
+                    <span> + </span>
+                  </Link>
+                </div>
+                <div className={`flex-row ${style['players-row']}`}>
+                  <Link to="/new-team">
+                    <span> + </span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -109,6 +137,12 @@ const NewTeam = () => {
               <Input type="text" placeholder="Player name"/>
             </FormControl>
           </div>
+        </div>
+        <div className={style['action-bar']}>
+          <span className="grey-a020-line"></span>
+          <Button to="/new-team" type="fill" className={style['btn-save']}>
+            Save
+          </Button>
         </div>
       </Card>
     </div>

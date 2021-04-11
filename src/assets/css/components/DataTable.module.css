@@ -1,3 +1,24 @@
 .table-cell{
   border-color: var(--grey-a010) !important;
 }
+
+.table-cell span {
+  display: inline-block;
+}
+
+thead .table-cell:nth-child(2) {
+  min-width: 160px;
+}
+
+tbody tr td:last-child div{
+  visibility: hidden;
+}
+
+tbody tr:hover {
+  background-color: var(--grey-a005);
+}
+
+tbody tr:hover td:last-child div{
+  visibility: visible;
+}
+
