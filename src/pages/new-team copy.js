@@ -24,32 +24,22 @@ const TeamFormationOptions = () => {
 
   return <>
     {options.map((value) => { 
-        return  <option value={value} key={value}>{value}</option>
+      return (
+        <option value={value} key={value}>{value}</option>
+      )
     })}
   </>
 }
 
-const validate = (values) => {
-  const errors = {};
-
-  if (!values.name) {
-    errors.name = "Team name is required";
-  }
-
-  if (!values.website) {
-    errors.website = "Website is required";
-  } else if (!/((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/.test(values.website)) {
-    errors.website = "Invalid URL";
-  }
-
-  if (!values.type) {
-    errors.type = "Team type is required";
-  } 
-
-  return errors;
-};
-
 const NewTeam = () => {
+
+  function validateName(value) {
+    let error
+    if (!value) {
+      error = "Team name is required"
+    } 
+    return error
+  }
 
   return <>
   <section>
@@ -61,94 +51,66 @@ const NewTeam = () => {
         </div>
         <Formik
           initialValues={{ 
-            name: "",
+            name: "", 
             description: "",
-            website: "",
-            type: "",
-            formation: "3 - 4 - 3",
              }}
-          validate={validate}
-          onSubmit={(values, { setSubmitting }) => {
+          onSubmit={(values, actions) => {
             setTimeout(() => {
               alert(JSON.stringify(values, null, 2))
-              setSubmitting(false)
+              actions.setSubmitting(false)
             }, 1000)
           }}
         >
         {(props) => (
-        <Form >
+        <Form>
         <div className={style['team-information']}>
           <h3 className="text-body">Team Information</h3>
             <div>
-              <Field name="name">
+              <Field name="name" validate={validateName}>
                 {({ field, form }) => (
-                  <FormControl isInvalid={form.errors.name && form.touched.name} className={style['form-item']} >
+                  <FormControl isInvalid={form.errors.name && form.touched.name} className={style['form-item']} isRequired>
                     <FormLabel htmlFor="name">Team Name</FormLabel>
-                    <Input {...field} 
-                          id="name"
-                          placeholder="Insert team name"/>
+                    <Input {...field} id="name" type="text" placeholder="Insert team name"/>
                     <FormErrorMessage>{form.errors.name}</FormErrorMessage>
                   </FormControl>
                 )}
               </Field>
-              <Field name="description">
-                {({ field }) => (
-                  <FormControl className={style['form-item-full']}>
-                    <FormLabel htmlFor="description">Description</FormLabel>
-                    <Textarea {...field} id="description" />
-                  </FormControl>
-                )}
-              </Field>
+              <FormControl id="description" className={style['form-item-full']}>
+                <FormLabel>Description</FormLabel>
+                <Textarea />
+              </FormControl>
             </div>
             <div>
-              <Field name="website">
-                {({ field, form }) => (
-                  <FormControl isInvalid={form.errors.website && form.touched.website} className={style['form-item']}>
-                    <FormLabel htmlFor="website">Team Website</FormLabel>
-                    <Input {...field} 
-                           id="website" 
-                           placeholder="https://myteam.com"/>
-                    <FormErrorMessage>{form.errors.website}</FormErrorMessage>
-                  </FormControl>
-                )}
-              </Field>
-              <Field name="type">
-                {({ field, form }) => (
-                  <FormControl isInvalid={form.errors.type && form.touched.type} className={style['form-item']}>
-                    <FormLabel htmlFor="type">Team Type</FormLabel>
-                    <RadioGroup {...field} id="type">
-                      <HStack spacing="30px">
-                        <Radio {...field} size="lg" _checked={{ bg: "brandPink.600" }} value="Real">Real</Radio>
-                        <Radio {...field} size="lg" _checked={{ bg: "brandPink.600" }} value="Fantasy">Fantasy</Radio>
-                      </HStack>
-                    </RadioGroup>
-                    <FormErrorMessage>{form.errors.type}</FormErrorMessage>
-                  </FormControl>
-                )}
-              </Field>
-              <Field name="tags">
-                {({ field }) => (
-                  <FormControl className={style['form-item']} >
-                    <FormLabel htmlFor="tags">Tags</FormLabel>
-                    <Textarea {...field} id="tags"/>
-                  </FormControl>
-                  )}
-              </Field>
+              <FormControl id="website" className={style['form-item']} isRequired>
+                <FormLabel>Team Website</FormLabel>
+                <Input type="url" placeholder="https://myteam.com"/>
+                <FormErrorMessage></FormErrorMessage>
+              </FormControl>
+              <FormControl as="fieldset" id="teamType" className={style['form-item']} isRequired>
+                <FormLabel as="legend">Team Type</FormLabel>
+                <RadioGroup defaultValue="Itachi">
+                  <HStack spacing="30px">
+                    <Radio size="lg" _checked={{ bg: "brandPink.600" }} height="20px" value="Real">Real</Radio>
+                    <Radio size="lg" _checked={{ bg: "brandPink.600" }} value="Fantasy">Fantasy</Radio>
+                  </HStack>
+                </RadioGroup>
+                <FormErrorMessage></FormErrorMessage>
+              </FormControl>
+              <FormControl id="teamTags" className={style['form-item']} >
+                <FormLabel>Tags</FormLabel>
+                <Textarea />
+              </FormControl>
             </div>
         </div>
         <div className={style['configure-squad']}>
           <h3 className="text-body">Configure Squad</h3>
           <div>
-            <Field name="formation">
-              {({ field }) => (
-                <FormControl className={style['form-item']}>
-                  <FormLabel htmlFor="formation">Formation</FormLabel>
-                  <Select {...field} id="formation">
-                    <TeamFormationOptions />
-                  </Select>
-                </FormControl>
-              )}
-            </Field>
+            <FormControl id="teamFormation" className={style['form-item']} isRequired>
+              <FormLabel>Formation</FormLabel>
+              <Select>
+                <TeamFormationOptions />
+              </Select>
+            </FormControl>
             <div className={style['soccer-field']}>
               <div>
                 <div className={`flex-row ${style['players-row']}`}>
@@ -201,7 +163,7 @@ const NewTeam = () => {
             </div>
           </div>
           <div>
-            <FormControl id="search" className={style['form-item']}>
+            <FormControl id="searchPlayers" className={style['form-item']}>
               <FormLabel>Search Players</FormLabel>
               <Input type="text" placeholder="Player name"/>
             </FormControl>
@@ -209,14 +171,19 @@ const NewTeam = () => {
         </div>
         <div className={style['action-bar']}>
           <span className="grey-a020-line"></span>
+
           <Button
-            variant="gradient"
+            mt={4}
+            colorScheme="teal"
             isLoading={props.isSubmitting}
             type="submit"
             className={style['btn-save']}
           >
-            Save
+            Submit
           </Button>
+          {/* <Button to="/new-team" type="fill" className={style['btn-save']}>
+            Save
+          </Button> */}
         </div>
         </Form>
         )}

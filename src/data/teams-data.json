@@ -1,0 +1,88 @@
+{
+"teams" : [
+  {
+    "name": "Barcelona",
+    "description": "Barcelona Squad",
+    "website": "https://www.gabidigital.work/",
+    "type": "Real",
+    "tags": ["Barcelona", "Real"],
+    "formation": "3 - 4 - 3",
+    "players": [
+      "José Maria", 
+      "Carlos Almeida", 
+      "Gabriela Gonçalves", 
+      "Francisco Souza",
+      "Ana Carla",
+      "Camila Teresa",
+      "Débora Cascada",
+      "Pedro Sampaio",
+      "Juliana Costa",
+      "Marcelo Silva",
+      "Carla Faria"
+    ]
+  },
+  {
+    "name": "Real Madrid",
+    "description": "Real Madrid Squad",
+    "website": "https://www.gabidigital.work/",
+    "type": "Fantasy",
+    "tags": ["Madrid", "Fantasy"],
+    "formation": "3 - 2 - 3 - 1",
+    "players": [
+      "José Maria", 
+      "Carlos Almeida", 
+      "Gabriela Gonçalves", 
+      "Francisco Souza",
+      "Ana Carla",
+      "Camila Teresa",
+      "Débora Cascada",
+      "Pedro Sampaio",
+      "Juliana Costa",
+      "Marcelo Silva",
+      "Carla Faria"
+    ]
+  },
+  {
+    "name": "Milan",
+    "description": "Milan Squad",
+    "website": "https://www.gabidigital.work/",
+    "type": "Real",
+    "tags": ["Milan", "Real"],
+    "formation": "4 - 3 - 2",
+    "players": [
+      "José Maria", 
+      "Carlos Almeida", 
+      "Gabriela Gonçalves", 
+      "Francisco Souza",
+      "Ana Carla",
+      "Camila Teresa",
+      "Débora Cascada",
+      "Pedro Sampaio",
+      "Juliana Costa",
+      "Marcelo Silva",
+      "Carla Faria"
+    ]
+  },
+  {
+    "name": "Liverpool",
+    "description": "Liverpool Squad",
+    "website": "https://www.gabidigital.work/",
+    "type": "Real",
+    "tags": ["Liverpool", "Real"],
+    "formation": "3 - 4 - 3",
+    "players": [
+      "José Maria", 
+      "Carlos Almeida", 
+      "Gabriela Gonçalves", 
+      "Francisco Souza",
+      "Ana Carla",
+      "Camila Teresa",
+      "Débora Cascada",
+      "Pedro Sampaio",
+      "Juliana Costa",
+      "Marcelo Silva",
+      "Carla Faria"
+    ]
+  }
+]
+}

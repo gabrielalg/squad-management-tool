@@ -7,8 +7,8 @@ const theme = extendTheme({
         fontFamily: "body",
       },
       label: {
-        _focus: {
-          color: "brandPink.600",
+        _invalid: {
+          color: "var(--chakra-colors-red-500)",
         }
       },
       textarea: {
@@ -65,19 +65,36 @@ const theme = extendTheme({
     },
     Input: {
       defaultProps: {
-        focusBorderColor: "brandPink.600",
+        // focusBorderColor: "brandPink.600",
       }
     },
     Textarea: {
       defaultProps: {
-        focusBorderColor: "brandPink.600",
+        // focusBorderColor: "brandPink.600",
       }
     },
     Select: {
       defaultProps: {
-        focusBorderColor: "brandPink.600",
+        // focusBorderColor: "brandPink.600",
       }
     },
+    Button: { 
+      variants: {
+        "gradient": {
+          height: "40px",
+          color: "var(--white)",
+          backgroundImage: "var(--brand-gradient-down)",
+          boxShadow: "0px 5px 25px 0px var(--grey-a010)",
+          _hover: {
+            boxShadow: "0px 5px 25px 0px var(--grey-a030)",
+            filter: "brightness(120%)",
+          },
+          _disabled: {
+            backgroundImage: "var(--brand-gradient-down) !important",
+          },
+        },
+      }
+    }
   }
 });
 

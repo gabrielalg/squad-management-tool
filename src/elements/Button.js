@@ -6,7 +6,6 @@ const Button = ({ children, to, type, className }) => {
     return (
       <Link to={to} className={className + ' ' + style['fill-btn']}>
         {children}
-        <div></div>
       </Link>
     );
   } 

@@ -1,6 +1,8 @@
 import { useMemo } from 'react';
+import { Link } from 'react-router-dom';
+import dataObj from '../data/teams-data.json';
 
-import { Table, Thead, Tbody, Tr, Th, Td, chakra } from "@chakra-ui/react"
+import { Table, Thead, Tbody, Tr, Th, Td, chakra, Tooltip } from "@chakra-ui/react"
 import { TriangleDownIcon, TriangleUpIcon, EditIcon, DeleteIcon } from "@chakra-ui/icons"
 import { useTable, useSortBy } from "react-table"
 
@@ -11,38 +13,36 @@ import style from '../assets/css/components/DataTable.module.css';
 import Arrows from '../assets/img/icons/arrows.svg';
 
 const DataTable = ( {className} ) => {
+
+  const teams = dataObj.teams;
+
   const tableActions = () => {
     return <>
       <div className="flex-row">
-        <EditIcon aria-label="edit icon" color="brandPink.600" margin="0 15px"/>
-        <DeleteIcon aria-label="delete icon" color="brandPink.600" margin="0 5px"/>
+        <Tooltip hasArrow label="Edit" aria-label="Tooltip for edit" placement="top">
+          <Link to="/new-team">
+            <EditIcon aria-label="edit icon" color="brandPink.600" margin="0 15px"/>
+          </Link>
+        </Tooltip>
+        <Tooltip hasArrow label="Delete" aria-label="Tooltip for delete" placement="top">
+          <Link to="/new-team">
+            <DeleteIcon aria-label="delete icon" color="brandPink.600" margin="0 5px"/>
+          </Link>
+        </Tooltip>
       </div>
     </>
   }
-  const data = useMemo(
-    () => [
-      {
-        name: "Barcelona",
-        description: "Barcelona Squad",
-        actions: tableActions()
-      },
-      {
-        name: "Real Madrid",
-        description: "Real Madrid Squad",
-        actions: tableActions()
-      },
-      {
-        name: "Milan",
-        description: "Milan Squad",
-        actions: tableActions()
-      },
-      {
-        name: "Liverpool",
-        description: "Liverpool Squad",
-        actions: tableActions()
-      },
-    ],
-    [],
+
+  const data = useMemo( () =>
+      teams.map((team) => {
+        let obj = {
+          name: team.name,
+          description: team.description,
+          actions: tableActions()
+        }
+        return obj;
+      }),
+    [teams],
   )
 
   const columns = useMemo(
@@ -97,8 +97,7 @@ const handleArrowChange = (column) => {
           <Tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map((column) => (
               <Th className={style['table-cell']}
-                {...column.getHeaderProps( column.isCanSort ? column.getSortByToggleProps() : column.canSort = false )
-                }
+                {...column.getHeaderProps( column.isCanSort ? column.getSortByToggleProps() : column.canSort = false )}
                 isNumeric={column.isNumeric}
               >
                 {column.render("Header")}

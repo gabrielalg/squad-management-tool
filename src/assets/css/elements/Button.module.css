@@ -20,23 +20,9 @@
   box-shadow: 0px 5px 25px 0px var(--grey-a010);
 }
 
-.fill-btn div {
-  background-color: var(--white-a010);
-  border-radius: 5px;
-  display: none;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-.fill-btn:hover div {
-  display: block;
-}
-
 .fill-btn:hover {
   box-shadow: 0px 5px 25px 0px var(--grey-a030);
+  filter: brightness(120%);
 }
 
 .fill-btn:visited, .fill-btn:active, .fill-btn:link {
