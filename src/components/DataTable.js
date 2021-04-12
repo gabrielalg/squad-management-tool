@@ -10,7 +10,7 @@ import { useTable, useSortBy } from "react-table"
 import style from '../assets/css/components/DataTable.module.css';
 
 // ICONS
-import Arrows from '../assets/img/icons/arrows.svg';
+import arrows from '../assets/img/icons/arrows.svg';
 
 const DataTable = ( {className} ) => {
 
@@ -75,7 +75,7 @@ const handleArrowChange = (column) => {
         return <TriangleUpIcon aria-label="sorted ascending" />
       }
     } else {
-      return <img src={Arrows} alt="Arrows Undefined" style={{display:"inline-block"}}/>
+      return <img src={arrows} alt="Arrows Undefined" style={{display:"inline-block"}}/>
     }
   } else {
     return null
