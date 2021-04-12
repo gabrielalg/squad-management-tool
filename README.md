@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+## Welcome to the Squad Manegement Tool!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To view just go to: [www.venturus-squad-management.netlify.app](https://venturus-squad-management.netlify.app/)
 
-## Available Scripts
+In this application, I implemented only Phase 1.
 
-In the project directory, you can run:
+Here is a detailed view:
 
-### `npm start`
+1. Implement Page Layout. ✅
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    1.1 Create placeholders for non implemented features. ✅
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. Implement "My teams" section. ✅
 
-### `npm test`
+    2.1 There is no need to implement Share action ✅
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    2.2 User must be able to sort by name and description. ✅
 
-### `npm run build`
+3. Ability to Create/Edit and Remove a team. 🤔 (Sort of)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    3.1 Team information section only.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+      3.1.1 All fields but description and tags are mandatory. ✅
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+      3.1.2 Default value is empty for all fields. ✅
 
-### `npm run eject`
+      3.1.3 Team website must validate site URL. ✅
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+      3.1.4 You must highlight fields/labels whenever user tries to create/update a team with invalid information. 🤔 (Sort of)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+      3.1.5 Current UI is displaying Team name as an example of an invalid field. ✅
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+      3.1.6 For tags field user must be able to enter a free text and tag will be created as soon as the user hits enter or semicolon. ❌
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. Ability to see what player was the most/less picked on. ❌
 
-## Learn More
+    4.1 Replace images by player initials. ❌
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Thank you!
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Gabriela Gonçalves
