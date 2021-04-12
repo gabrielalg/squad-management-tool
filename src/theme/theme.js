@@ -87,7 +87,7 @@ const theme = extendTheme({
           boxShadow: "0px 5px 25px 0px var(--grey-a010)",
           _hover: {
             boxShadow: "0px 5px 25px 0px var(--grey-a030)",
-            filter: "brightness(120%)",
+            filter: "brightness(115%)",
           },
           _disabled: {
             backgroundImage: "var(--brand-gradient-down) !important",
