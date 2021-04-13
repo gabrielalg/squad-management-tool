@@ -16,7 +16,7 @@ const Home = () => {
 
   return <>
    <section>
-    <div className="content flex-row">
+    <div className={`content flex-row ${style['control-layout']}`}>
       <div>
         <Card className={style['card-item']}>
           <div className={`flex-row ${style['card-item__title']}`}>

@@ -109,24 +109,26 @@ section {
   }
 
   .soccer-field > div:nth-of-type(1) {
-    padding-bottom: 65px;
+    padding-bottom: 55px;
   }
 
   .soccer-field > div:nth-of-type(2) {
-    padding-top: 65px;
+    padding-top: 55px;
   }
 
   .soccer-field > div > div {
     justify-content: space-between;
-    padding: 15px 20px;
+    padding: 20px;
   }
 
   .soccer-field a {
-    width: 60px;
-    height: 60px;
-    margin: 10px auto;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
     display: block;
-    background-color: var(--white-a060);
+    padding: 3px;
+    border-radius: 50%;
+    border: 2px dashed var(--white-a060);
   }
 
   .soccer-field a span {
@@ -137,20 +139,17 @@ section {
     height: 100%;
     line-height: 60px;
     color: var(--white);
+    border-radius: 50%;
+    background-color: var(--white-a060);
+   
   }
 
-  .soccer-field a:hover {
+  .soccer-field a span:hover {
     background-color: var(--white-a080);
   }
 
   .soccer-field > div:nth-child(1) {
     border-bottom: 1px solid var(--white-a030);
-  }
-
-  .soccer-field > div a{
-    outline: 2px dashed var(--white-a060);
-    border-radius: 50%;
-    outline-offset: 4px;
   }
 
   .soccer-field .circle {

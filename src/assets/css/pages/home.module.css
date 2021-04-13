@@ -9,6 +9,7 @@ section {
 section > div > div {
   flex: 1;
   margin: 30px 0;
+  min-width: 450px;
 }
 
 section > div > div:nth-child(1) {
@@ -115,9 +116,10 @@ section > div > div:nth-child(1) .card-item {
   }
 
   .soccer-field img {
-    width: 120px;
-    height: 120px;
+    min-width: 130px;
+    height: 130px;
     margin: 20px auto;
+    padding: 5px;
   }
 
   .soccer-field h4 {
@@ -145,9 +147,8 @@ section > div > div:nth-child(1) .card-item {
   }
 
   .soccer-field > div:nth-child(1) img{
-    outline: 3px dashed var(--white-a060);
+    border: 2px dashed var(--white-a060);
     border-radius: 50%;
-    outline-offset: 5px;
   }
 
   .soccer-field .circle {
@@ -160,3 +161,18 @@ section > div > div:nth-child(1) .card-item {
     top: 50%;
     transform: translate(-50%, -50%);
   }
+
+@media (max-width: 1100px) {
+  .control-layout {
+    flex-wrap: wrap;
+  }
+
+  section > div > div:nth-child(1) {
+    margin: 30px 0;
+  }
+
+  section > div > div:nth-child(2) {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+}
