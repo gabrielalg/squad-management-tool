@@ -1,8 +1,8 @@
-## Welcome to the Squad Manegement Tool!
+## Welcome to the Squad Management Tool!
 
 To view just go to: [www.venturus-squad-management.netlify.app](https://venturus-squad-management.netlify.app/)
 
-In this application, I implemented only Phase 1.
+In this application I implemented only Phase 1.
 
 Here is a detailed view:
 
