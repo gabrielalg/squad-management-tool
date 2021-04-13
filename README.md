@@ -1,10 +1,10 @@
 ## Welcome to the Squad Management Tool!
 
-To view just go to: [www.venturus-squad-management.netlify.app](https://venturus-squad-management.netlify.app/)
+I made this application using ReactJS together with the libraries: React Router, Chakra UI, React Table and Formik.
 
-In this application I implemented only Phase 1.
+To view just go to: [www.squad-management.netlify.app](https://squad-management.netlify.app/)
 
-Here is a detailed view:
+Regarding what was requested, I implemented only Phase 1. Here is a detailed view:
 
 1. Implement Page Layout. ✅
 
