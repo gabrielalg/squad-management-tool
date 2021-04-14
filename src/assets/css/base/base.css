@@ -7,9 +7,6 @@
 body {
   height: 100vh;
   overflow: hidden;
-  font-family: var(--font-roboto);
-  color: var(--grey);
-  background-color: var(--grey-a005);
 }
 
 #root {

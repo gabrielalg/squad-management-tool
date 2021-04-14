@@ -21,12 +21,12 @@ const DataTable = ( {className} ) => {
       <div className="flex-row">
         <Tooltip hasArrow label="Edit" aria-label="Tooltip for edit" placement="top">
           <Link to="/new-team">
-            <EditIcon aria-label="edit icon" color="brandPink.600" margin="0 15px"/>
+            <EditIcon aria-label="edit icon" color="brandPink.600" margin="0 10px"/>
           </Link>
         </Tooltip>
         <Tooltip hasArrow label="Delete" aria-label="Tooltip for delete" placement="top">
           <Link to="/new-team">
-            <DeleteIcon aria-label="delete icon" color="brandPink.600" margin="0 5px"/>
+            <DeleteIcon aria-label="delete icon" color="brandPink.600" margin="0 10px"/>
           </Link>
         </Tooltip>
       </div>
@@ -91,7 +91,7 @@ const handleArrowChange = (column) => {
   } = useTable({ columns, data }, useSortBy);
 
   return (
-    <Table className={className} {...getTableProps()}>
+    <Table id={style.dataTable} className={className} {...getTableProps()}>
       <Thead>
         {headerGroups.map((headerGroup) => (
           <Tr {...headerGroup.getHeaderGroupProps()}>

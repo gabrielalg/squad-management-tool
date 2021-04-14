@@ -1,5 +1,13 @@
-.table-cell{
-  border-color: var(--grey-a010) !important;
+#dataTable .table-cell{
+  border-color: var(--grey-a010);
+  -webkit-padding-start: var(--chakra-space-4);
+  padding-inline-start: var(--chakra-space-4);
+  -webkit-padding-end: var(--chakra-space-4);
+  padding-inline-end: var(--chakra-space-4);
+}
+
+#dataTable tr th:last-child, #dataTable tr td:last-child {
+  width: 100px;
 }
 
 .table-cell span {
@@ -25,12 +33,13 @@ thead .table-cell {
   text-transform: capitalize;
 }
 
-tbody tr td:last-child div{
-  visibility: hidden;
-}
-
 tbody tr:hover {
   background-color: var(--grey-a005);
+}
+
+tbody tr td:last-child div{
+  visibility: hidden;
+  justify-content: flex-end;
 }
 
 tbody tr:hover td:last-child div{

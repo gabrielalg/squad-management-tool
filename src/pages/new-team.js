@@ -20,7 +20,7 @@ const TeamFormationOptions = () => {
     "4 - 3 - 2",
     "4 - 4 - 2",
     "4 - 5 - 1",
-    "5 - 4 -1"]
+    "5 - 4 - 1"]
 
   return <>
     {options.map((value) => { 
@@ -29,7 +29,7 @@ const TeamFormationOptions = () => {
   </>
 }
 
-const validate = (values) => {
+const validateForm = (values) => {
   const errors = {};
 
   if (!values.name) {
@@ -46,6 +46,11 @@ const validate = (values) => {
     errors.type = "Team type is required";
   } 
 
+  if (Object.keys(errors).length !== 0 && errors.constructor === Object) {
+    const teamInfo = document.querySelector('#teamInfo').offsetTop - 80;
+    document.querySelector('#root').scrollTo({top: teamInfo, behavior: "smooth"});
+  }
+  
   return errors;
 };
 
@@ -67,7 +72,7 @@ const NewTeam = () => {
             type: "",
             formation: "3 - 4 - 3",
              }}
-          validate={validate}
+          validate={validateForm}
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
               alert(JSON.stringify(values, null, 2))
@@ -78,7 +83,7 @@ const NewTeam = () => {
         {(props) => (
         <Form >
         <div className={style['team-information']}>
-          <h3 className="text-body">Team Information</h3>
+          <h3 className="text-body" id="teamInfo">Team Information</h3>
             <div>
               <Field name="name">
                 {({ field, form }) => (

@@ -5,6 +5,7 @@ const theme = extendTheme({
     global: {
       body: {
         fontFamily: "body",
+        bg: "var(--grey-a005)",
       },
       label: {
         _invalid: {
