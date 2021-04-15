@@ -6,6 +6,7 @@ footer {
 
   footer div {
     text-align: center;
+    margin: 0 auto;
   }
 
 #copyright, #copyright a {

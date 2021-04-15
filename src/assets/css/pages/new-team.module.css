@@ -101,6 +101,7 @@ section {
   text-align: center;
   position: relative;
   padding: 20px 0;
+  margin-bottom: 30px;
 }
 
   .soccer-field > div {
@@ -181,4 +182,23 @@ section {
     width: 300px;
     float: right;
     margin: 30px 20px;
+  }
+
+  @media (max-width: 800px) {
+    .team-information > div {
+      width: 100%;
+      flex: auto;
+    }
+
+    .team-information > div:nth-of-type(1) {
+      margin: 0;
+    }
+  
+    .team-information > div:nth-of-type(2) {
+      margin: 0;
+    }
+
+    .team-information {
+      padding: 20px 0;
+    }
   }

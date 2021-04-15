@@ -9,7 +9,6 @@ section {
 section > div > div {
   flex: 1;
   margin: 30px 0;
-  min-width: 450px;
 }
 
 section > div > div:nth-child(1) {
@@ -174,5 +173,9 @@ section > div > div:nth-child(1) .card-item {
   section > div > div:nth-child(2) {
     margin: 0;
     margin-bottom: 30px;
+  }
+  section > div > div {
+    width: 100%;
+    flex: auto;
   }
 }
